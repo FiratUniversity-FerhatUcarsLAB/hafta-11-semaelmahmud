@@ -1,8 +1,8 @@
-public class Exercise4_3 {
+public class Main {
 
     public static void zoop() {
         baffle();
-        System.out.print("You wugga ");
+        System.out.print(" You wugga ");
         baffle();
     }
 
@@ -14,7 +14,7 @@ public class Exercise4_3 {
     }
 
     public static void baffle() {
-        System.out.print("wug");
+        System.out.print(" wug");
         ping();
     }
 
