@@ -1,21 +1,41 @@
-public class Exercise4_4 {
+public class Main {
 
-    public static int getNumber() {
-        return 42;
+    // 1. Değer döndüren metot
+    public static int square(int x) {
+        return x * x;
     }
 
-    public static void sayHello() {
-        System.out.println("hello");
+    // 2. Void metot
+    public static void printBoo() {
+        System.out.println("boo!");
     }
 
     public static void main(String[] args) {
 
-        // 1) Donus degerini kullanmayin -> ne oluyor?
-        getNumber();
+        // ----------------------
+        // SORU 1: Değer döndüren metodu çağırıp sonucu kullanmamak
+        // ----------------------
+        square(5);  // Sonuç kullanılmadı, ama geçerli. Java hata vermez.
+        
+        // İsteğe bağlı olarak sonucu kullanırsak:
+        int sonuc = square(5);
+        System.out.println("square(5) = " + sonuc);  // Çıktı: square(5) = 25
 
-        // 2) void metodu ifade icinde kullanin -> ne oluyor?
-        // System.out.println(sayHello() + 7);
 
-        // Cevaplarinizi yorum olarak ekleyin.
+        // ----------------------
+        // SORU 2: Void metodu bir ifadenin içinde kullanmak
+        // ----------------------
+
+        printBoo(); // Normal kullanım, çıktı: boo!
+
+        // HATA VEREN ÖRNEK (yorum satırı olarak bırakıldı)
+        // printBoo() + 7; 
+        // Derleme hatası: 
+        // error: bad operand types for binary operator '+'
+        // first type:  void
+        // second type: int
+        // printBoo() + 7;
+
+        // Çözüm: Void metotları yalnızca tek başına çağırabiliriz.
     }
 }
